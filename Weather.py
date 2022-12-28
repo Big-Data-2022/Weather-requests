@@ -77,5 +77,13 @@ information_weather = f"""
 Восход солнца: \U0001F305 {city_sunrise}
 Продолжительность дня: \U0001F305 {city_lingth_of_the_day} \U0001F304
 Закат солнца: \U0001F304 {city_sunset}
+
+
+
+Автор
+    Инстаграм - marselle.naz
+    Телеграм  - endless_key_02
+    Github    - marse11e
 """
+
 print(information_weather)
