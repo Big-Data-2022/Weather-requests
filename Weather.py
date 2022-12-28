@@ -69,13 +69,13 @@ city_lingth_of_the_day = datetime.fromtimestamp(data["sys"]['sunset']) - datetim
 information_weather = f"""
 Погода в городе: {city_name}
 Описание погоды: {city_description_main}
-Температура: {city_temp}C
-Ощушается: {city_feels_like}C
-Влажность: {city_humidity}%
-Давление воздуха: {city_pressure} гПа
-Ветер: {city_wind} м/с
-Восход солнца: {city_sunrise}
-Продолжительность дня: {city_lingth_of_the_day}
-Закат солнца: {city_sunset}
+Температура: \U0001F321 {city_temp}C
+Ощушается: \U0001F321 {city_feels_like}C
+Влажность: \U0001F302 {city_humidity}%
+Давление воздуха: \U0001F32C {city_pressure} гПа
+Ветер: \U0001F32C {city_wind} м/с
+Восход солнца: \U0001F305 {city_sunrise}
+Продолжительность дня: \U0001F305 {city_lingth_of_the_day} \U0001F304
+Закат солнца: \U0001F304 {city_sunset}
 """
 print(information_weather)
