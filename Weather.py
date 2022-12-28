@@ -10,56 +10,50 @@ url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=d5bb44d0f
 response = requests.get(url)
 
 data = response.json()
-pprint(data)
 
-all_weather = [
-    'Smoke', 'Clouds', 'Clear', 'Tornado', 'Dust', 'Sand', 'Fog', 'Haze',
-    'Mist', 'Snow', 'Rain', 'Drizzle', 'Thunderstorm'
-    ]
 
 city_description = data['weather'][0]
-for i in all_weather:
-    if city_description['main'] == 'Smoke':
-        city_description_main = f'\U0001f324 {city_description["main"]}'
-    
-    elif city_description['main'] == 'Clouds':
-        city_description_main = f'\U0001F325 {city_description["main"]}'
-    
-    elif city_description['main'] == 'Clear':
-        city_description_main = f'\U00002600 {city_description["main"]}'
+if city_description['main'] == 'Smoke':
+    city_description_main = f'\U0001f324 {city_description["main"]}'
 
-    elif city_description['main'] == 'Tornado':
-        city_description_main = f'\U0001F32A {city_description["main"]}'
-    
-    elif city_description['main'] == 'Dust':
-        city_description_main = f'\U0001F300 {city_description["main"]}'
-    
-    elif city_description['main'] == 'Sand':
-        city_description_main = f'\U0001F300 {city_description["main"]}'
-    
-    elif city_description['main'] == 'Fog':
-        city_description_main = f'\U0001F32B {city_description["main"]}'
-    
-    elif city_description['main'] == 'Haze':
-        city_description_main = f'\U0001F32B {city_description["main"]}'
-    
-    elif city_description['main'] == 'Mist':
-        city_description_main = f'\U0001F32B {city_description["main"]}'
-    
-    elif city_description['main'] == 'Snow':
-        city_description_main = f'\U000026C4 {city_description["main"]} Можно идти делать снеговика'
-    
-    elif city_description['main'] == 'Rain':
-        city_description_main = f'\U0001F327 {city_description["main"]} Сиди дома не высововайся'
-    
-    elif city_description['main'] == 'Drizzle':
-        city_description_main = f'\U0001F326 {city_description["main"]}'
-    
-    elif city_description['main'] == 'Thunderstorm':
-        city_description_main = f'\U0001F329 {city_description["main"]}'
-    
-    else:
-        city_description_main = city_description["main"]
+elif city_description['main'] == 'Clouds':
+    city_description_main = f'\U0001F325 {city_description["main"]}'
+
+elif city_description['main'] == 'Clear':
+    city_description_main = f'\U00002600 {city_description["main"]}'
+
+elif city_description['main'] == 'Tornado':
+    city_description_main = f'\U0001F32A {city_description["main"]}'
+
+elif city_description['main'] == 'Dust':
+    city_description_main = f'\U0001F300 {city_description["main"]}'
+
+elif city_description['main'] == 'Sand':
+    city_description_main = f'\U0001F300 {city_description["main"]}'
+
+elif city_description['main'] == 'Fog':
+    city_description_main = f'\U0001F32B {city_description["main"]}'
+
+elif city_description['main'] == 'Haze':
+    city_description_main = f'\U0001F32B {city_description["main"]}'
+
+elif city_description['main'] == 'Mist':
+    city_description_main = f'\U0001F32B {city_description["main"]}'
+
+elif city_description['main'] == 'Snow':
+    city_description_main = f'\U000026C4 {city_description["main"]} Можно идти делать снеговика'
+
+elif city_description['main'] == 'Rain':
+    city_description_main = f'\U0001F327 {city_description["main"]} Сиди дома не высововайся'
+
+elif city_description['main'] == 'Drizzle':
+    city_description_main = f'\U0001F326 {city_description["main"]}'
+
+elif city_description['main'] == 'Thunderstorm':
+    city_description_main = f'\U0001F329 {city_description["main"]}'
+
+else:
+    city_description_main = city_description["main"]
 
 city_name = data["name"]
 city_temp = data["main"]['temp']
